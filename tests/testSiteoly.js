@@ -4,9 +4,9 @@ import { fixture, Selector, test } from "testcafe";
 fixture`A set of tests for our Siteoly site`
   .page`https://id24test5.siteoly.com/`;
 
-const elementSelector = Selector('#input-class mt-12') // this isn't working
-const emailForm = elementSelector.find('email')
-const submitForm = elementSelector.find('submit')
+const elementSelector = Selector('#subscribe-form') //# for searching via ID
+const emailForm = elementSelector.find('#email');
+const submitForm = emailForm.find('Submit');
 
 //Tests
 test(`select an element`, async t => {
